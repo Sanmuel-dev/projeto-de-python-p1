@@ -15,8 +15,10 @@ def BotaoDeIgualdade():
     try:
         resultado = str(eval(operacao))
         valor_input.set(resultado)
-    except (SyntaxError, ZeroDivisionError):
+    except (ZeroDivisionError):
         valor_input.set(0)
+    except (SyntaxError):
+        valor_input.set("Erro, limpe o Display")
         operacao = "" # adicona função de efetuar os calculos ao botao de igualdade =
 
 
